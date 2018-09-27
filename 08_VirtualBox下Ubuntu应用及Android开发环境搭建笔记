@@ -143,6 +143,25 @@ Exec=env UBUNTU_MENUPROXY= 0
 build工程helloworld，run后有结果输出就Ok了
 
 //----------------------------------------------------
+/*5.修改hosts文件*/
+
+sudo gedit /etc/hosts
+
+填写语句：
+
+134.170.108.26 	onedrive.live.com
+134.170.108.152 skyapi.onedrive.live.com
+108.61.162.224 	laoshandaoshi.so
+66.175.222.232 	g.ttlsa.com
+106.184.2.182 	guge.io
+
+//----------------------------------------------------
+/**/
+
+apt-cache search libevent
+
+sudo apt-get install libevent-dev libevent-1.4-2
+//----------------------------------------------------
 /*chrome浏览器不能在root用户中登陆的问题*/
 找到启动文件 ：/opt/google/chrome/google-chrome 
 
