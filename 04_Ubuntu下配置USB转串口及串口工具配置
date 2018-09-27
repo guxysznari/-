@@ -1,0 +1,78 @@
+	
+Ubuntu下配置USB转串口及串口工具配置
+    
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$  
+      
+    1、下载：sudo apt-get install minicom  
+    2、插入usb转串口线，终端输入：dmesg | grep usb  
+    ............................................................................................  
+    [ 7415.893942] usbserial: USB Serial Driver core  
+    [ 7415.931116] usb 3-1: ark3116 converter now attached to ttyUSB0  
+    [ 7415.931141] usbcore: registered new interface driver ark3116  
+    [ 7430.248072] usb 3-1: USB disconnect, address 2  
+    [ 7434.588044] usb 3-1: new full speed USB device using uhci_hcd and address 3  
+    .............................................................................................  
+    3、设置:minicom -s  
+    serial port setup-->serial device:/dev/ttyUSB0  
+    硬件数据流、软件数据流控制均设置为否  
+    4、保存退出  
+    5、命令窗口运行：minicom  
+    ----------------------------------------------------------------------------------------------------  
+    注意：默认情况下Ubuntu已经安装了USB转串口驱动(pl2303)。我的是ark3116，也是默认安装  
+    1、# lsmod | grep usbserial  
+    如果有usbserial，说明系统支持USB转串口。  
+    yzj@yzj-laptop:~/minicom$ lsmod | grep usbserial  
+    usbserial              36264  3 ark3116  
+      
+    2、插上USB转串口，在终端输入命令#dmesg | grep ttyUSB0，如果出现连接成功信息，则说明ubuntu系统已经识别该设备了。  
+    ----------------------------------------------------------------------------------------  
+    组合键的用法是：先按Ctrl+A组合键，然后松开这两个键，再按Z键。另外还有一些常用的组合键。  
+    （1）S键：发送文件到目标系统中；  
+    （2）W键：自动卷屏。当显示的内容超过一行之后，自动将后面的内容换行。这个功能在查看内核的启动信息时很有用。  
+    （3）C键：清除屏幕的显示内容；  
+    （4）B键：浏览minicom的历史显示；  
+    （5）X键：退出mInicom，会提示确认退出。  
+      
+    $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  
+
+好的，USB转串口配置好以后，就是串口工具了。这里用的是Kermit。
+
+安装Kermit
+
+$ sudo apt-get install ckermit
+
+配置
+
+这里的配置是手动编写一个配置文件.kermrc,放在/home/jun目录下(当然，你的肯定不是jun目录了，就是当前用户的主目录)
+
+$ vi.kermrc                   #下边是文件内容，注意这个文件放在/home/jun下
+
+#其实你装的软件的很多配置文件也都在这个目录下，只不过 #是隐藏的，.开头的么
+
+set line /dev/ttyUSB0
+
+set speed 115200
+
+set carrier-watch off
+
+set handshake none
+
+set flow-control none
+
+robust
+
+set file type bin
+
+set file name lit
+
+set rec pack 1000
+
+set send pack 1000
+
+set window 5
+
+执行
+
+$ sudo kermit -c
+
+就启动了，要关闭的话“Ctrl＋\”，然后按”C”,输入“exit”，回车，就退出了。
