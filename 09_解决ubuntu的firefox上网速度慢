@@ -1,0 +1,60 @@
+//=========================================================================
+在/usr/share/lightdm/lightdm.conf.d/50-ubuntu.conf中加入：
+greeter-session=unity-greeter
+user-session=ubuntu
+greeter-show-manual-login=true #手工输入登陆系统的用户名和密码
+allow-guest=false   #不允许guest登录
+
+2. 使用如下命令安装gdm。“sudo apt-get install gdm"
+3. 配置默认的登陆器选项。”sudo dpkg-reconfig gdm“ 使用gdm作为默认的登陆器
+
+//=========================================================================
+解决ubuntu的firefox上网速度慢+3
+
+分类：软件　标签：firefox、优化、提速、火狐　3,642人浏览
+
+刚给家里的电脑装上ubuntu，但是发现用firefox上网十分慢。一开始以为是用wubi装的Ubuntu后性能变低的原因，但是在切换了chrome后发现上网速度很快。于是就觉得应该是ff出了问题。
+
+果然，在用FF打开网页的时候，下面的状态栏上显示着正在加载很多东西，发现可能是DNS出现问题。于是上网查了下资料，发现真的是解析域名上出现 了问题（其实不是问题）。所以要为FF设置DNS缓存以提高速度。（在WIN下这个是自动设置好的，在ubuntu下需要我们手动设置）
+
+我们需要到的软件是dnsmasq，下面是安装配置教程：
+
+1.安装dnsmasq
+
+sudo apt-get install dnsmasq
+
+2.配置dnsmasq
+
+sudo gedit /etc/dnsmasq.conf
+
+找到
+
+#resolv-file=
+
+把#去掉并于等号后加上/etc/resolv.dnsmasq.conf
+
+3.应用配置
+
+sudo cp /etc/resolv.conf /etc/resolv.dnsmasq.conf
+
+4.编辑resolv.conf
+
+sudo gedit /etc/resolv.conf
+
+将其中的域名服务器全部去掉，加入以下这行
+nameserver 127.0.0.1
+
+然后保存退出。
+
+5.配置wvdial
+
+sudo gedit /etc/ppp/peers/wvdial
+
+在 usepeerdns 前面增加 ＃ ，也就是把这条语句覆盖掉。
+
+以防，resolv.conf的设置被pppoe覆盖。
+
+重启电脑。不重启，你会发现无法解析域名。
+
+http://www.ubuntusoft.com/solve-ubuntus-firefox-slow-access.html
+//=========================================================================
