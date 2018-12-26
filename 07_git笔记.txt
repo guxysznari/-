@@ -1,52 +1,70 @@
-1.´´½¨°æ±¾¿â   
-   mkdir£º XX           (´´½¨Ò»¸ö¿ÕÄ¿Â¼ XXÖ¸Ä¿Â¼Ãû)
-   pwd£º                ÏÔÊ¾µ±Ç°Ä¿Â¼µÄÂ·¾¶¡£
-   git init             °Ñµ±Ç°µÄÄ¿Â¼±ä³É¿ÉÒÔ¹ÜÀíµÄgit²Ö¿â£¬Éú³ÉÒş²Ø.gitÎÄ¼ş¡£
+ï»¿1.åˆ›å»ºç‰ˆæœ¬åº“   
+   mkdirï¼š XX           (åˆ›å»ºä¸€ä¸ªç©ºç›®å½• XXæŒ‡ç›®å½•å)
+   pwdï¼š                æ˜¾ç¤ºå½“å‰ç›®å½•çš„è·¯å¾„ã€‚
+   git init             æŠŠå½“å‰çš„ç›®å½•å˜æˆå¯ä»¥ç®¡ç†çš„gitä»“åº“ï¼Œç”Ÿæˆéšè—.gitæ–‡ä»¶ã€‚
    
-2.°ÑÎÄ¼şÌí¼Óµ½°æ±¾¿â   
-   git add XX           °ÑxxÎÄ¼şÌí¼Óµ½Ôİ´æÇøÈ¥¡£
-   git commit ¨Cm ¡°XX¡±Ìá½»ÎÄ¼ş ¨Cm ºóÃæµÄÊÇ×¢ÊÍ¡£
+2.æŠŠæ–‡ä»¶æ·»åŠ åˆ°ç‰ˆæœ¬åº“   
+   git add XX           æŠŠxxæ–‡ä»¶æ·»åŠ åˆ°æš‚å­˜åŒºå»ã€‚
+   git commit â€“m â€œXXâ€æäº¤æ–‡ä»¶ â€“m åé¢çš„æ˜¯æ³¨é‡Šã€‚
 
-   git status           ²é¿´²Ö¿â×´Ì¬
-   git diff  XX         ²é¿´XXÎÄ¼şĞŞ¸ÄÁËÄÇĞ©ÄÚÈİ
+   git status           æŸ¥çœ‹ä»“åº“çŠ¶æ€
+   git diff  XX         æŸ¥çœ‹XXæ–‡ä»¶ä¿®æ”¹äº†é‚£äº›å†…å®¹
   
-3.°æ±¾»ØÍË   
-   git log              ²é¿´ÀúÊ·¼ÇÂ¼
-   git reset  ¨Chard    HEAD^ »òÕß git reset  ¨Chard HEAD~ »ØÍËµ½ÉÏÒ»¸ö°æ±¾
-                            (Èç¹ûÏë»ØÍËµ½100¸ö°æ±¾£¬Ê¹ÓÃgit reset ¨Chard HEAD~100 )
-   cat XX               ²é¿´XXÎÄ¼şÄÚÈİ
-   git reflog           ²é¿´ÀúÊ·¼ÇÂ¼µÄ°æ±¾ºÅid
-   git checkout ¡ª XX   °ÑXXÎÄ¼şÔÚ¹¤×÷ÇøµÄĞŞ¸ÄÈ«²¿³·Ïú¡£
-   git rm XX            É¾³ıXXÎÄ¼ş
+3.ç‰ˆæœ¬å›é€€   
+   git log              æŸ¥çœ‹å†å²è®°å½•
+   git reset  â€“hard    HEAD^ æˆ–è€… git reset  â€“hard HEAD~ å›é€€åˆ°ä¸Šä¸€ä¸ªç‰ˆæœ¬
+                            (å¦‚æœæƒ³å›é€€åˆ°100ä¸ªç‰ˆæœ¬ï¼Œä½¿ç”¨git reset â€“hard HEAD~100 )
+   cat XX               æŸ¥çœ‹XXæ–‡ä»¶å†…å®¹
+   git reflog           æŸ¥çœ‹å†å²è®°å½•çš„ç‰ˆæœ¬å·id
+   git checkout â€” XX   æŠŠXXæ–‡ä»¶åœ¨å·¥ä½œåŒºçš„ä¿®æ”¹å…¨éƒ¨æ’¤é”€ã€‚
+   git rm XX            åˆ é™¤XXæ–‡ä»¶
 
-4.Ô¶³Ì²Ö¿â¹ÜÀí
-   git remote add origin https://github.com/ev-power/XiaoYong ¹ØÁªÒ»¸öÔ¶³Ì¿â
-   git push ¨Cu(µÚÒ»´ÎÒªÓÃ-u ÒÔºó²»ĞèÒª) origin master °Ñµ±Ç°master·ÖÖ§ÍÆËÍµ½Ô¶³Ì¿â
-   git clone https://github.com/ev-power/XiaoYong  ´ÓÔ¶³Ì¿âÖĞ¿ËÂ¡
+4.è¿œç¨‹ä»“åº“ç®¡ç†
+   git remote add origin https://github.com/ev-power/XiaoYong å…³è”ä¸€ä¸ªè¿œç¨‹åº“
+   git push â€“u(ç¬¬ä¸€æ¬¡è¦ç”¨-u ä»¥åä¸éœ€è¦) origin master æŠŠå½“å‰masteråˆ†æ”¯æ¨é€åˆ°è¿œç¨‹åº“
+   git clone https://github.com/ev-power/XiaoYong  ä»è¿œç¨‹åº“ä¸­å…‹éš†
 
 
-5.·ÖÖ§¹ÜÀí
-   git checkout ¨Cb dev     ´´½¨dev·ÖÖ§ ²¢ÇĞ»»µ½dev·ÖÖ§ÉÏ
-   git branch               ²é¿´µ±Ç°ËùÓĞµÄ·ÖÖ§
-   git checkout master      ÇĞ»»»Ømaster·ÖÖ§
-   git checkout dev         ÇĞ»»µ½dev·ÖÖ§
-   git merge dev            ÔÚµ±Ç°µÄ·ÖÖ§ÉÏºÏ²¢dev·ÖÖ§
-   git branch ¨Cd dev       É¾³ıdev·ÖÖ§
-   git branch name          ´´½¨·ÖÖ§
+5.åˆ†æ”¯ç®¡ç†
+   git checkout â€“b dev     åˆ›å»ºdevåˆ†æ”¯ å¹¶åˆ‡æ¢åˆ°devåˆ†æ”¯ä¸Š
+   git branch               æŸ¥çœ‹å½“å‰æ‰€æœ‰çš„åˆ†æ”¯
+   git checkout master      åˆ‡æ¢å›masteråˆ†æ”¯
+   git checkout dev         åˆ‡æ¢åˆ°devåˆ†æ”¯
+   git merge dev            åœ¨å½“å‰çš„åˆ†æ”¯ä¸Šåˆå¹¶devåˆ†æ”¯
+   git branch â€“d dev       åˆ é™¤devåˆ†æ”¯
+   git branch name          åˆ›å»ºåˆ†æ”¯
 
-   git stash        °Ñµ±Ç°µÄ¹¤×÷Òş²ØÆğÀ´ µÈÒÔºó»Ö¸´ÏÖ³¡ºó¼ÌĞø¹¤×÷
-   git stash list   ²é¿´ËùÓĞ±»Òş²ØµÄÎÄ¼şÁĞ±í
-   git stash apply  »Ö¸´±»Òş²ØµÄÎÄ¼ş£¬µ«ÊÇÄÚÈİ²»É¾³ı
-   git stash drop   É¾³ıÎÄ¼ş
-   git stash pop    »Ö¸´ÎÄ¼şµÄÍ¬Ê± Ò²É¾³ıÎÄ¼ş
+   git stash        æŠŠå½“å‰çš„å·¥ä½œéšè—èµ·æ¥ ç­‰ä»¥åæ¢å¤ç°åœºåç»§ç»­å·¥ä½œ
+   git stash list   æŸ¥çœ‹æ‰€æœ‰è¢«éšè—çš„æ–‡ä»¶åˆ—è¡¨
+   git stash apply  æ¢å¤è¢«éšè—çš„æ–‡ä»¶ï¼Œä½†æ˜¯å†…å®¹ä¸åˆ é™¤
+   git stash drop   åˆ é™¤æ–‡ä»¶
+   git stash pop    æ¢å¤æ–‡ä»¶çš„åŒæ—¶ ä¹Ÿåˆ é™¤æ–‡ä»¶
 
-   git remote       ²é¿´Ô¶³Ì¿âµÄĞÅÏ¢
-   git remote ¨Cv   ²é¿´Ô¶³Ì¿âµÄÏêÏ¸ĞÅÏ¢
-   git push origin master  Git»á°Ñmaster·ÖÖ§ÍÆËÍµ½Ô¶³Ì¿â¶ÔÓ¦µÄÔ¶³Ì·ÖÖ§ÉÏ   
-   git push origin dev     °Ñdev·ÖÖ§ÍÆËÍµ½Ô¶³Ì
+   git remote       æŸ¥çœ‹è¿œç¨‹åº“çš„ä¿¡æ¯
+   git remote â€“v   æŸ¥çœ‹è¿œç¨‹åº“çš„è¯¦ç»†ä¿¡æ¯
+   git push origin master  Gitä¼šæŠŠmasteråˆ†æ”¯æ¨é€åˆ°è¿œç¨‹åº“å¯¹åº”çš„è¿œç¨‹åˆ†æ”¯ä¸Š   
+   git push origin dev     æŠŠdevåˆ†æ”¯æ¨é€åˆ°è¿œç¨‹
    
-   git checkout -b dev origin/dev   ´´½¨Ô¶³ÌoriginµÄdev·ÖÖ§µ½±¾µØÀ´
-   git push origin dev              °ÑÏÖÔÚµÄdev·ÖÖ§ÍÆËÍµ½Ô¶³Ì
+   git checkout -b dev origin/dev   åˆ›å»ºè¿œç¨‹originçš„devåˆ†æ”¯åˆ°æœ¬åœ°æ¥
+   git push origin dev              æŠŠç°åœ¨çš„devåˆ†æ”¯æ¨é€åˆ°è¿œç¨‹
    
-   git pull         ´Ó¹ØÁªµÄÔ¶³Ì·ÖÖ§/master À­È¡µ½±¾µØ·ÖÖ§/master
-   git branch --set-upstream dev origin/dev ±¾µØdevÓëÔ¶³Ìorigin/dev¹ØÁª
+   git pull         ä»å…³è”çš„è¿œç¨‹åˆ†æ”¯/master æ‹‰å–åˆ°æœ¬åœ°åˆ†æ”¯/master
+   git branch --set-upstream dev origin/dev æœ¬åœ°devä¸è¿œç¨‹origin/devå…³è”
+
+   6.æ ‡ç­¾ç®¡ç†
+   git tag      æŒ‰å­—æ¯é¡ºåºåˆ—å‡ºæ ‡ç­¾
+
+   git tag -a v1.0 -m "version 1.4"        åˆ›å»ºé™„æ³¨æ ‡ç­¾
+   git tag v1.0-lw                         åˆ›å»ºè½»é‡æ ‡ç­¾
+   git show v1.4                           æŸ¥çœ‹æ ‡ç­¾ä¿¡æ¯
+
+   $ git tag -a v1.1 -m "version 1.1" 04f654b  åœ¨æŸä¸ªå†å²æäº¤04f654bä¸Šè¡¥æ‰“ä¸€ä¸ªæ ‡ç­¾ï¼Œåªéœ€åœ¨å‘½ä»¤çš„æœ«å°¾æŒ‡å®šæäº¤çš„æ£€éªŒå’Œã€‚
+   $ git push origin v1.1           å…±äº«æ ‡ç­¾
+   $ git push origin --tags         æ¨é€å¾ˆå¤šæ ‡ç­¾
+
+   $ git checkout -b version2 v2.0.0 æ£€å‡ºæ ‡ç­¾checkout -b [branchname] [tagname]æ£€å‡ºæ ‡ç­¾å¹¶åˆ›å»ºåˆ†æ”¯
+
+   7.å­æ¨¡å—
+   git submodule init              åˆå§‹åŒ–å­æ¨¡å—æœ¬åœ°é…ç½®æ–‡ä»¶
+   git submodule update            ä»è¯¥é¡¹ç›®ä¸­æŠ“å–æ‰€æœ‰æ•°æ®å¹¶æ£€å‡ºçˆ¶é¡¹ç›®ä¸­åˆ—å‡ºçš„åˆé€‚çš„æäº¤
+   git clone --recursive https://github.com/chaconinc/MainProject  å…‹éš†å¸¦å­æ¨¡å—çš„åº“
